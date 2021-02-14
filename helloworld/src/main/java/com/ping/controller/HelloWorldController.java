@@ -1,7 +1,10 @@
 package com.ping.controller;
 
+import com.ping.domain.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
 
 /**
  * @author liyaoping
@@ -13,5 +16,10 @@ public class HelloWorldController {
     @RequestMapping("/")
     String home() {
         return "Hello World!";
+    }
+
+    @RequestMapping("/testJson")
+    public User printJson(){
+        return new User(1111,"liyaoping",new Date());
     }
 }
