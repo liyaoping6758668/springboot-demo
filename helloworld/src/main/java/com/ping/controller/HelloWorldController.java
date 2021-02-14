@@ -1,8 +1,8 @@
 package com.ping.controller;
 
 import com.ping.domain.User;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
@@ -11,7 +11,7 @@ import java.util.Date;
  * @version 1.0
  * @date 2021-2-13 21:37
  */
-@RestController
+@Controller
 public class HelloWorldController {
     @RequestMapping("/")
     String home() {
@@ -26,5 +26,10 @@ public class HelloWorldController {
     @RequestMapping("/index")
     public String index(){
         return "index";
+    }
+
+    @RequestMapping("/uploadview")
+    public String uploadview(){
+        return "upload";
     }
 }
