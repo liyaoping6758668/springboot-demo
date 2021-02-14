@@ -22,4 +22,9 @@ public class HelloWorldController {
     public User printJson(){
         return new User(1111,"liyaoping",new Date());
     }
+
+    @RequestMapping("/index")
+    public String index(){
+        return "index";
+    }
 }
