@@ -1,0 +1,5 @@
+server:
+  port: 9999
+web:
+  file:
+    path: D:/javadeveloperworkspace/workspaceIdea/springboot-demo/helloworld/src/main/resources/static/images/

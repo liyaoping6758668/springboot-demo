@@ -1,6 +1,8 @@
 package com.ping.controller;
 
 import com.ping.domain.JsonData;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,9 +20,11 @@ import java.util.UUID;
  * @date 2021-2-15 0:15
  */
 @Controller
+@PropertySource("classpath:application.yml")
 public class FileUploadController {
 
-    private static final String filePath = "D:/javadeveloperworkspace/workspaceIdea/springboot-demo/helloworld/src/main/resources/static/images/";
+    @Value("${web.file.path}")
+    private  String filePath;
 
 
     @RequestMapping(value = "upload")
@@ -29,6 +33,8 @@ public class FileUploadController {
 
         //file.isEmpty(); 判断图片是否为空
         //file.getSize(); 图片大小进行判断
+
+        System.out.println("自动注入文件路径为："+filePath);
 
         String name = request.getParameter("name");
         System.out.println("用户名："+name);

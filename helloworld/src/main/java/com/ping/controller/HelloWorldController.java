@@ -3,6 +3,7 @@ package com.ping.controller;
 import com.ping.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
@@ -11,10 +12,12 @@ import java.util.Date;
  * @version 1.0
  * @date 2021-2-13 21:37
  */
-@Controller
+@RestController
 public class HelloWorldController {
     @RequestMapping("/")
     String home() {
+        System.out.println("哈哈111。。。");
+        System.out.println("666");
         return "Hello World!";
     }
 
