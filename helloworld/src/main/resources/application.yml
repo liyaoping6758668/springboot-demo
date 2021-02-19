@@ -3,3 +3,6 @@ server:
 web:
   file:
     path: D:/javadeveloperworkspace/workspaceIdea/springboot-demo/helloworld/src/main/resources/static/images/
+test:
+  domain: 测试
+  name: 李耀平
