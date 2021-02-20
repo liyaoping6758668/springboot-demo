@@ -18,11 +18,11 @@ public class HelloWorldController {
     @Autowired
     private ServerSetting serverSetting;
 
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     String home() {
         System.out.println("哈哈111。。。");
         System.out.println("666");
-        return serverSetting.toString();
+        return "你好！";
     }
 
     @RequestMapping("/testJson")
