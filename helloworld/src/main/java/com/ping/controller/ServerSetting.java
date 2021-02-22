@@ -1,6 +1,5 @@
 package com.ping.controller;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @date 2021-2-19 22:21
  */
 @Component
-@PropertySource("classpath:application.yml")
+@PropertySource("classpath:application.properties")
 @ConfigurationProperties(prefix = "test")
 public class ServerSetting {
 

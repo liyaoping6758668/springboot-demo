@@ -20,7 +20,7 @@ import java.util.UUID;
  * @date 2021-2-15 0:15
  */
 @Controller
-@PropertySource("classpath:application.yml")
+@PropertySource("classpath:application.properties")
 public class FileUploadController {
 
     @Value("${web.file.path}")
